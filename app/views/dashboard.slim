@@ -1,0 +1,15 @@
+- require_relative '../services/data_provider'
+doctype html
+html
+  head
+    title Recent Gifcoin transactions
+    script src="https://cdn.jsdelivr.net/jquery/3.0.0/jquery.min.js"
+    script src="/js/application.js"
+    link href='/css/dashboard.css' rel='stylesheet' type='text/css'
+  body
+    #main data-activities="#{DataProvider.new.json_data}"
+      .loading-message
+        .loading-message__throbber
+          img src='img/throbber.gif'
+        .loading-message__message
+          | Loading data
