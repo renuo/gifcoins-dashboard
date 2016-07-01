@@ -9,7 +9,7 @@ $ ->
 
       controller = new ActivityController(activities)
       showNext = () -> controller.showNext()
-      setInterval(showNext, 2000)
+      setInterval(showNext, 30000)
 
   class ActivityController
     constructor: (activities) ->
